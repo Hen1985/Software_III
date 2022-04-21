@@ -1,15 +1,7 @@
 # Software_II
 
 
-Clase  21/04/22 
----
-title: "Analisis de los precios de los Carros Toyota"
-output:
-  html_document:
-    df_print: paged
-  word_document: default
----
-
+Clase  21/04/22
 
 
 ```{r}
