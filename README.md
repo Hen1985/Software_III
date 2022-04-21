@@ -3,6 +3,7 @@
 
 Clase  21/04/22
 
+El marco de datos contiene  los  precios  historícos  de Toyota  Corolla , en ella encontrará 10 variables de las cuales nueve son cuantitativas y  una cualitativa.
 
 ```{r}
 library(ggplot2)
