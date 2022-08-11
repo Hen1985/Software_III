@@ -17,3 +17,10 @@ uso de software en el análisis de datos estadísticos que apoyan y agilizan la 
 decisiones oportunas, así como el desarrollo de destrezas y habilidades en el manejo de 
 los diferentes comandos/opciones para el manejo eficiente de bases de datos y la prueba
 de significancia de una y dos variables.
+
+
+Clase número 1[11/08/2022]
+
+Introducción al análisis de regresión lineal
+
+https://github.com/Hen1985/Software_III/blob/main/Regresi%C3%B3n%20Lineal.pdf
