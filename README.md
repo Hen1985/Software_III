@@ -21,6 +21,10 @@ de significancia de una y dos variables.
 
 Clase número 1[11/08/2022]
 
-Introducción al análisis de regresión lineal
+1. Lectura sobre el genesis de la regresión lineal
+
+https://github.com/Hen1985/Software_III/blob/main/galton-1886-jaigi-regression-stature.pdf
+
+2. Introducción al análisis de regresión lineal
 
 https://github.com/Hen1985/Software_III/blob/main/Regresi%C3%B3n%20Lineal.pdf
