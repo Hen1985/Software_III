@@ -85,8 +85,10 @@ durbinWatsonTest(modelo1, simulate = T, reps = 1000)
 Sepal.Length <- dat[,c(1)]
 Petal.Width<- dat[,c(3)]
 datos <- c(Sepal.Length, Petal.Width)
+
 tratamiento <- rep(c("Sepal.Length", "Petal.Width"), each = 150)
 tratamiento
+
 bartlett.test(datos, tratamiento, center = mean)# median o mean
 
 leveneTest(datos, tratamiento, center = mean) # car, requiere car data
