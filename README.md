@@ -53,6 +53,7 @@ plot(dat$Sepal.Length, dat$Petal.Width)
 ###############################################################
 ### Modelar  
 ###############################################################
+
 modelo1 <- lm(dat$Sepal.Length~dat$Petal.Width)
 summary(modelo1)
 
@@ -68,13 +69,16 @@ plot(modelo1)
 ###############################################################
 ### Crierio 1. Autocorrelacion 
 ###############################################################
+
 library(car)
 library(carData)
 #Hipótesis nula: No autocorrelación vs autocorrelación
 durbinWatsonTest(modelo1, simulate = T, reps = 1000)
+
 ###############################################################
 ### Crierio 4. Heteroscedasticidad
 ###############################################################
+
 Sepal.Length <- dat[,c(1)]
 Petal.Width<- dat[,c(3)]
 datos <- c(Sepal.Length, Petal.Width)
@@ -83,6 +87,7 @@ tratamiento
 bartlett.test(datos, tratamiento, center = mean)# median o mean
 
 leveneTest(datos, tratamiento, center = mean) # car, requiere car data
+
 ###############################################################
 ### Nota: La prueba es aplicada cuando se ha mostrado normalidad, 
 ### de lo contrario usar leveneTest es para pruebas no paramétricas
