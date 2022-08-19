@@ -57,6 +57,7 @@ plot(dat$Sepal.Length, dat$Petal.Width)
 ###############################################################
 
 modelo1 <- lm(dat$Sepal.Length~dat$Petal.Width)
+
 summary(modelo1)
 
 ###############################################################
@@ -74,6 +75,7 @@ plot(modelo1)
 
 library(car)
 library(carData)
+
 #Hipótesis nula: No autocorrelación vs autocorrelación
 
 durbinWatsonTest(modelo1, simulate = T, reps = 1000)
@@ -83,10 +85,13 @@ durbinWatsonTest(modelo1, simulate = T, reps = 1000)
 ###############################################################
 
 Sepal.Length <- dat[,c(1)]
+
 Petal.Width<- dat[,c(3)]
+
 datos <- c(Sepal.Length, Petal.Width)
 
 tratamiento <- rep(c("Sepal.Length", "Petal.Width"), each = 150)
+
 tratamiento
 
 bartlett.test(datos, tratamiento, center = mean)# median o mean
