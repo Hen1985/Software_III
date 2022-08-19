@@ -29,6 +29,8 @@ https://github.com/Hen1985/Software_III/blob/main/galton-1886-jaigi-regression-s
 
 https://github.com/Hen1985/Software_III/blob/main/Regresi%C3%B3n%20Lineal.pdf
 
+Clase número 4 [19/08/22]
+
 Desarrollo de la clase 
 
 ################################################################
