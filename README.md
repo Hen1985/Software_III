@@ -75,6 +75,7 @@ plot(modelo1)
 library(car)
 library(carData)
 #Hipótesis nula: No autocorrelación vs autocorrelación
+
 durbinWatsonTest(modelo1, simulate = T, reps = 1000)
 
 ###############################################################
