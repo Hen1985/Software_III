@@ -128,17 +128,21 @@ https://www.nature.com/articles/s41437-020-00394-6
 ### Problema 1.1
 ###############################################################
 
-## Se desea conocer los efectos del alcohol en la realización de operaciones
-## matemáticas sencillas (sumas). Para ello se eligen al azar 20 personas que 
-## subduvidimos aletoriamente en cuatro grupo de cinco y a los que se les aplica
-## tambien aleatoriamente, cuatro tratamiento distintos: T1: Sin alchol, 
-## T2:baja dosis de alchol, T3: media dosis de alchol, T4: alta dosis de alchol
-## Los timpos que tardan en realizar las sumas sin error son los siguientes.
+Se desea conocer los efectos del alcohol en la realización de operaciones
+matemáticas sencillas (sumas). Para ello se eligen al azar 20 personas que 
+subduvidimos aletoriamente en cuatro grupo de cinco y a los que se les aplica
+tambien aleatoriamente, cuatro tratamiento distintos: T1: Sin alchol, 
+T2:baja dosis de alchol, T3: media dosis de alchol, T4: alta dosis de alchol
+Los timpos que tardan en realizar las sumas sin error son los siguientes.
 
 t1<-	c(42,39,48,43,44)
+
 t2<- c(45,46, 45,39,43)
+
 t3<- c(64,61,50,55,58)
+
 t4<- c(56,55,62,59,60)
+
 
 ###############################################################
 ### Inciso 1. Comprobar si los datos de cada tratamiento se distribuyen de manera normal
@@ -156,10 +160,12 @@ ks.test(t4, mean(t4), sd(t4))
  
 
 tiempo<- c(42,39,48,43,44, 45,46, 45,39,43,64,61,50,55,58,56,55,62,59,60)
+
 tratamiento <- c("t1","t1","t1","t1","t1", "t2", "t2","t2","t2","t2","t3",
                  "t3","t3","t3","t3","t4","t4","t4","t4","t4")
 
 dat<- data.frame(tratamiento,tiempo)
+
 dat
 
 bartlett.test(tiempo~tratamiento, data = dat)
@@ -170,9 +176,11 @@ bartlett.test(tiempo~tratamiento, data = dat)
 ###############################################################
  
 modelo1 <- aov(tiempo~tratamiento, dat)
+
 modelo1
 
 plot(modelo1)
+
 (result<- summary(modelo1))
 
 ###############################################################
@@ -184,16 +192,17 @@ plot(modelo1)
 
 utLSD <-LSD.test(modelo1, "tratamiento", group=FALSE,console=TRUE)
 
-
-
 ###############################################################
 ### Inciso 5. Visualizar las comparaciones múltiples para las medias observadas
 ###############################################################
 
 
 #library(ggpval)
+
 #library(ggstatsplot)
+
 #library(rstantools)
+
 #library(PMCMRplus)
 
 x1<- ggbetweenstats(
